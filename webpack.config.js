@@ -11,7 +11,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx$|\.js$/,
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
@@ -21,6 +21,9 @@ module.exports = {
                 }
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
     },
     devServer: {
         contentBase: path.join(__dirname),
