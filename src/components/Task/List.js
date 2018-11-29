@@ -1,10 +1,15 @@
 import React from "react";
+import ListElement from './ListElement';
+
+const values = [
+	'task 1',
+	'task 2',
+	'task 3'
+];
 
 const TaskList = () => (
 	<ul>
-		<li>Task 1</li>
-		<li>Task 2</li>
-		<li>Task 3</li>
+		{values.map((value) => <ListElement key={value} value={value} /> )}
 	</ul>
 );
 
