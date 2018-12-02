@@ -1,9 +1,9 @@
 import TaskForm from "../../components/Task/Form";
 import React from "react";
 
-const ScreenTaskForm = () => (
+const ScreenTaskForm = (props) => (
 	<div>
-		<TaskForm />
+		<TaskForm {...props} />
 	</div>
 );
 

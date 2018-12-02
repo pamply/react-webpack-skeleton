@@ -1,24 +1,29 @@
-import React, { lazy, Component } from 'react';
+import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import RootScreen from "./screens/App";
+const ScreenMain = lazy(() => import("./screens/Main"));
 const ScreenTaskList = lazy(() => import("./screens/Task/List"));
 const ScreenTaskForm = lazy(() => import("./screens/Task/Form"));
-const AboutScreen = lazy(() => import("./screens/About"));
+const ScreenAbout = lazy(() => import("./screens/About"));
+const ScrenUserRegister = lazy(() => import("./screens/User/Register"));
+
+import ScreenLogin from "./screens/Login";
 
 import UIHeader from "./UI/Header";
 import UIFooter from "./UI/Footer";
 
 // TODO make it work with task/list and task/form
-const ScreenRoot = () => {
+const ScreenRoot = (props) => {
 	return (
 		<div>
 			<UIHeader />
 			<Switch>
 				<Route path="/task-list" component={ScreenTaskList} />
 				<Route path="/task-form" component={ScreenTaskForm} />
-				<Route path="/about" component={AboutScreen} />
-				<Route path="/" component={RootScreen} />
+				<Route path="/about" component={ScreenAbout} />
+				<Route path="/root" component={ScreenMain} />
+				<Route path="/register" component={ScrenUserRegister} />
+				<Route path="/" component={ScreenLogin} />
 			</Switch>
 			<UIFooter />
 		</div>

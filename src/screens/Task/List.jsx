@@ -1,9 +1,9 @@
 import TaskList from "../../components/Task/List";
 import React from "react";
 
-const ScreenTaskList = () => (
+const ScreenTaskList = (props) => (
 	<div>
-		<TaskList />
+		<TaskList {...props} />
 	</div>
 );
 

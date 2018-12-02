@@ -1,9 +1,9 @@
 import React from 'react';
 
-const About  = () => (
+const ScreenAbout  = () => (
 	<div>
-		This is the component About
+		This is the component ScreenAbout
 	</div>
 )
 
-export default About;
+export default ScreenAbout;

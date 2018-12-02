@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 // TODO make it work with task/list and task/form
-const RootScreen = () => (
+const ScreenMain = () => (
 	<div>
 		<div>
 			<ul>
@@ -14,4 +14,4 @@ const RootScreen = () => (
 	</div>
 );
 
-export default RootScreen;
+export default ScreenMain;
